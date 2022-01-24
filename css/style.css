@@ -640,3 +640,46 @@ body {
     bottom: 0;
   }
 }
+
+/* #Error Page
+================================================== */
+.error-page {
+
+}
+
+.error-page .banner .img img,
+.error-page .banner .img picture {
+  height: calc(100vh - 4.84vw);
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.error-page .banner h1 {
+  line-height: .6;
+  margin-bottom: 1.5vw;
+}
+
+.error-page .banner p {
+  margin-bottom: 3.125vw;
+}
+
+.error-page .banner a {
+  border-bottom: 1px solid white;
+}
+
+@media (max-width: 1023.98px) {
+  .error-page .banner .img img,
+  .error-page .banner .img picture {
+    height: calc(100vh - 16vw);
+  }
+
+  .error-page .banner h1 {
+    line-height: .7;
+    margin-bottom: 8vw;
+  }
+  
+  .error-page .banner p {
+    margin-bottom: 18vw;
+  }
+}
