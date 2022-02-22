@@ -145,6 +145,13 @@ body {
   width: 12.23vw;
 }
 
+@media (min-width: 1024px) {
+  .header .collapse,
+  .header-links .collapse-toggler img {
+    display: none;
+  }
+}
+
 @media (max-width: 1023.98px) {
   .header {
     padding: 3.5vw 0;
@@ -155,6 +162,71 @@ body {
   }
   
   .header-menu {
+    position: fixed;
+    top: 16vw;
+    left: 0;
+    height: calc(100vh - 16vw);
+    width: 100%;
+    background-image: url('../img/global/mobile-menu-bg.jpg');
+    background-size: cover;
+    background-position: top center;
+    color: white;
+    display: block;
+    padding: 6.65vw;
+    opacity: 0;
+    visibility: visible;
+    transition: all .4s ease;
+  }
+
+  .header.show .header-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header-links ul {
+    display: block;
+  }
+
+  .header-links ul li {
+    border-bottom: 1px solid white;
+  }
+
+  .header-links ul li a,
+  .header-links .collapse-toggler {
+    padding: 3.6vw 0;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .header-links .collapse-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-links .collapse-toggler img {
+    width: 4vw;
+    margin-left: 6vw;
+    transition: all .4s ease;
+  }
+
+  .header-links .collapsible.show .collapse-toggler img {
+    transform: rotate(180deg);
+  }
+
+  .header-links .collapse a {
+    padding: 2vw 0;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .header-links .collapse > div {
+    padding-bottom: 4vw;
+  }
+
+  .header-search {
     display: none;
   }
   

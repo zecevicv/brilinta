@@ -2,6 +2,19 @@
   ======================================================= */
 const body = document.querySelector('body')
 
+/* #Header
+  ======================================================= */
+const header = document.querySelector('.header');
+const hamburgerBtn = document.querySelector('.header-hamburger');
+
+if (hamburgerBtn) {
+  hamburgerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    header.classList.toggle('show');
+    body.classList.toggle('no-scroll');
+  });
+}
+
 /* #Category Sliders
   ======================================================= */
 // Top Slider
